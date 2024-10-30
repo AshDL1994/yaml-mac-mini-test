@@ -31,4 +31,4 @@ jobs:
 
       # Run your macOS-specific test
       - name: Run macOS-only test
-        run: python test_main.py
+        run: python test/test_main.py
