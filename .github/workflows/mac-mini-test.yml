@@ -29,6 +29,9 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=src" >> $GITHUB_ENV    
+
       # Run your macOS-specific test
       - name: Run macOS-only test
         run: python test/test_main.py
