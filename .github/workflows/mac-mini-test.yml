@@ -30,8 +30,5 @@ jobs:
       - name: Set PYTHONPATH
         run: echo "PYTHONPATH=$(pwd)/src" >> $GITHUB_ENV   
 
-      - name: Verify PYTHONPATH
-        run: echo "PYTHONPATH is: $PYTHONPATH"
-
       - name: Run macOS-only test
         run: python test/test_main.py
